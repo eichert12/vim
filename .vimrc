@@ -25,13 +25,20 @@ set    number
 set    guioptions-=T
 set    guioptions-=m
 set    wildmode=list:longest
+set    fuoptions=maxvert,maxhorz
+
+" Settings for VimClojure
+let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
+let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+
 cd ~/development/rivermark
 
 " set mappings
 " control j and control k switch panes and maximize
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
-
+nmap ggVG
+"
 " block commenting mappings , and comment characteer will add lhs comment
 " character ,c will clear
 map ,# :s/^/#/<CR>
