@@ -28,17 +28,22 @@ This Vim plugin implements interactive Ruby debugger in Vim.
 
         git clone git://github.com/astashov/vim-ruby-debugger.git
 
-2.  Copy contents of 'vim' folder to your ~/.vim/. You should have 3 files there then: **~/.vim/plugin/ruby_debugger.vim**, **~/.vim/bin/ruby_debugger.rb** and **~/.vim/doc/ruby_debugger.txt**
-    First file is a debugger plugin and second is a small ruby script, that makes interaction between the VIM and the ruby-debug-ide gem. Third is documentation file.
+    or just download the archive from here:
 
-3.  Generate local tags file
+        http://github.com/astashov/vim-ruby-debugger/tarball/master
+
+    You will get the 'vim-ruby-debugger' dir with the plugin.
+
+2.  Copy contents of the 'vim-ruby-debugger' dir to your ~/.vim/ (or to ~/.vim/bundle/vim-ruby-debugger if you use pathogen).
+
+3.  Generate the local tags file
 	
         :helptags ~/.vim/doc
 
     Now, you can use
-    
+
         :help ruby-debugger
-        
+
     to get help for the ruby-debugger plugin.
 
 I've tested the plugin in Windows and Linux. All tests should be passed there.
@@ -50,11 +55,11 @@ I've tested the plugin in Windows and Linux. All tests should be passed there.
     servername explicitly, e.g., **vim --servername VIM**
 
 2.  Go to the directory with some your Rails application.
-         
+
          :cd ~/projects/rails
 
 3.  Run Server with Debugger:
-   
+
          :Rdebugger
 
     It will kill any listeners of ports 39767 and 39768 and run rdebug-ide and ~/.vim/bin/ruby_debugger.rb on these ports accordingly.
@@ -74,9 +79,9 @@ I've tested the plugin in Windows and Linux. All tests should be passed there.
 
 # Testing #
 
-If you want to run tests, replace in /plugin directory ruby_debugger.vim to **ruby_debugger_test.vim** (take it from additionals/plugin directory).
+If you want to run tests, replace in /autoload directory ruby_debugger.vim to **ruby_debugger.vim** from additionals/autoload directory.
 And then, in command mode execute
-  
+
          :call g:TU.run()
 
 
